@@ -137,7 +137,7 @@ public class test{
 ```
 
 ---
-## 物件
+## 物件 (具有this保留字, 表示該物件)
 ```java
 class IcCard{ // 定義 物件的類別
 	String name; // 屬性
@@ -197,4 +197,40 @@ public class test{
         mtd.methods(num3);
     }
 }	
+```
+## 物件的建構子
+```java
+class Object{
+    int val;
+    // 建構子
+    Object(int element){
+        val = element;
+    }
+}
+
+public class test{
+    public static void main(String[] args){
+        Object ob1 = new Object(7); // 宣告時需使用建構子
+        System.out.println(ob1.val);
+    }
+}
+// 初始化的overloading:
+class Object{
+    int val = 0;
+    String name = "name";
+    Object(String element){
+        name = element;
+    }
+    Object(int element){
+        val = element;
+    }
+}
+public class test{
+    public static void main(String[] args){
+        Object ob1 = new Object(7);
+        Object ob2 = new Object("John");
+        System.out.println(ob1.name+":\t"+ob1.val);
+        System.out.println(ob2.name+":\t"+ob2.val);
+    }
+}
 ```
